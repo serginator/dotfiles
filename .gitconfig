@@ -32,7 +32,6 @@
   delbranch = "! f() { git dev; git br -d $1; git push origin :$1; }; f"
 
 ; URL shortcuts by @tdecs
-# url shortcuts
 [url "http://github.com/"]
   insteadOf = "gh:"
 
