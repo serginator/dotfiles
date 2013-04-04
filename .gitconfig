@@ -1,0 +1,61 @@
+[user]
+  name = Sergio Ruiz
+  email = serginator@gmail.com
+
+[core]
+  editor = vim
+
+[merge]
+  tool = diff
+
+[alias]
+  add = add -u
+  co = checkout
+  st = status
+  ci = commit
+  br = branch
+  root = !pwd
+  visual = !gitk &i
+  uncommit = reset --soft HEAD^
+  unstage = reset HEAD --
+  sh = stash
+  unsh = stash pop
+  lg = "log --graph --pretty=format:'%Cred%h%Creset - %C(bold blue)<%an>%Creset %C(yellow)%d%Creset %s %Cgreen(%cr)' --abbrev-commit --date=relative"
+  prune = remote prune origin 	; Removes local branches that dont't
+				; exist remotely
+  
+  ; PDI FLOW
+  dev = "! git checkout develop; git pull origin develop"
+  feature = "! f() { git dev; git co -b feature/$1; git push origin feature/$1; }; f"
+  bug = "! f() { git dev; git co -b bug/$1; git push origin bug/$1; }; f"
+  hardening = "! f() { git dev; git co -b hardening/$1; git push origin hardening/$1; }; f"
+  delbranch = "! f() { git dev; git br -d $1; git push origin :$1; }; f"
+
+; URL shortcuts by @tdecs
+# url shortcuts
+[url "http://github.com/"]
+  insteadOf = "gh:"
+
+[url "git@github.com:"]
+  insteadOf = "https://github.com/"
+  insteadOf = "http://github.com/"
+  insteadOf = "gh:"
+
+[url "git@github.com:serginator/"]
+  insteadOf = "gs:"
+
+[url "http://github.com/serginator/"]
+  insteadOf = "gs:"
+
+[url "git@pdihub.hi.inet:"]
+  insteadOf = "pdi:"
+
+[url "git@pdihub.hi.inet:srs30/"]
+  insteadOf = "srs30:"
+
+[push]
+  default = current
+
+[color]
+  ui = true
+
