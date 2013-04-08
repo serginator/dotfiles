@@ -8,3 +8,5 @@ alias tarsvn='tar --exclude={.svn,.idea} -z -c -v -f '
 alias targit='tar --exclude={.git,.idea} -z -c -v -f '
 alias aurigaevpnon="sudo /etc/init.d/openvpn start aurigae"
 alias aurigaevpnoff="sudo /etc/init.d/openvpn stop aurigae"
+alias nexusMount="sudo mtpfs -o allow_other /media/nexus4/"
+alias nexusUmount="sudo umount /media/nexus4"
