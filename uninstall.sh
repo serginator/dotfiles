@@ -12,5 +12,6 @@ mv $BACKUP/.bash_aliases .
 mv $BACKUP/.bashrc .
 mv $BACKUP/.gitconfig .
 rm -rf $BACKUP
+rm -rf ~/.unix-tools
 
 echo -e "DONE"

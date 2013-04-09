@@ -11,5 +11,6 @@ mv .gitconfig .dotfiles_backup
 ln $DOTS_FOLDER/.bash_aliases .
 ln $DOTS_FOLDER/.bashrc .
 ln $DOTS_FOLDER/.gitconfig .
+ln -s $DOTS_FOLDER/unix-tools ~/.unix-tools
 
 echo -e "DONE"
