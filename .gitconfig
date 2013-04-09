@@ -11,6 +11,7 @@
 [alias]
   add = add -u
   co = checkout
+  cobk = checkout - ;switch to latest branch
   st = status
   ci = commit
   br = branch
