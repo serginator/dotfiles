@@ -1,3 +1,4 @@
+alias please='sudo'
 alias ls='ls -aF --color=always'
 alias ll='ls -l'
 alias update='sudo apt-get update && sudo apt-get upgrade'
