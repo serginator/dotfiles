@@ -11,6 +11,7 @@ alias targit='tar --exclude={.git,.idea} -z -c -v -f '
 alias aurigaevpnon='sudo /etc/init.d/openvpn start aurigae'
 alias aurigaevpnoff='sudo /etc/init.d/openvpn stop aurigae'
 alias wepcrackeator='please ~/.unix-tools/wepcrackeator.sh'
+alias search='please find / -name '
 
 # To be able to connect to Nexus 4 in Ubuntu do the following:
 # sudo apt-get install mtp-tools mtpfs
