@@ -2,15 +2,18 @@
 # Install this dotfiles and backup the older ones
 
 DOTS_FOLDER=`pwd`
+BACKUP_FOLDER=".dotfiles_backup"
 
 cd ~
-mkdir .dotfiles_backup
-mv .bash_aliases .dotfiles_backup
-mv .bashrc .dotfiles_backup
-mv .gitconfig .dotfiles_backup
+mkdir $BACKUP_FOLDER
+mv .bash_aliases $BACKUP_FOLDER
+mv .bashrc $BACKUP_FOLDER
+mv .gitconfig $BACKUP_FOLDER
+mv .git_svn_bash_prompt $BACKUP_FOLDER
 ln $DOTS_FOLDER/.bash_aliases .
 ln $DOTS_FOLDER/.bashrc .
 ln $DOTS_FOLDER/.gitconfig .
+ln $DOTS_FOLDER/.git_svn_bash_prompt .
 ln -s $DOTS_FOLDER/unix-tools ~/.unix-tools
 
 echo -e "DONE"
