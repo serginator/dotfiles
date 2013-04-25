@@ -118,6 +118,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
+if [ -f ~/.git-sh-prompt ]; then
+  . ~/.git-sh-prompt
+fi
+
+
 if [ -f ~/.git_svn_bash_prompt ]; then
   . ~/.git_svn_bash_prompt
 fi
