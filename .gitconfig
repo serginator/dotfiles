@@ -21,18 +21,19 @@
   sh = stash
   unsh = stash pop
   lg = "log --graph --pretty=format:'%Cred%h%Creset - %C(bold blue)<%an>%Creset %C(yellow)%d%Creset %s %Cgreen(%cr)' --abbrev-commit --date=relative"
-  prune = remote prune origin 	; Removes local branches that dont't
-				; exist remotely
+  prune = remote prune origin ; Removes local branches that dont't exist remotely
   back = checkout -
-  
+
   ; PDI FLOW
   dev = "! git checkout develop; git pull origin develop"
   feature = "! f() { git dev; git co -b feature/$1; git push origin feature/$1; }; f"
   bug = "! f() { git dev; git co -b bug/$1; git push origin bug/$1; }; f"
-  subbug = "! f() { git pull origin `git rev-parse --abbrev-ref HEAD`; git co -b bug/$1; git push origin bug/$1 }; f"
+  task = "! f() { git dev; git co -b task/$1; git push origin task/$1; }; f"
+  subbug = "! f() { git update; git co -b bug/$1; git push origin bug/$1; }; f"
   hardening = "! f() { git dev; git co -b hardening/$1; git push origin hardening/$1; }; f"
   delbranch = "! f() { git dev; git br -d $1; git push origin :$1; }; f"
-  mergedev = "! git dev; git back; git merge develop"
+  renamebranch = "! f() { git branch -m $1 $2; git push origin :$1; git push --set-upstream origin $2; }; f"
+  mergedev = "! git dev; git checkout -; git update; git merge develop"
 
 ; URL shortcuts by @tdecs
 [url "http://github.com/"]
