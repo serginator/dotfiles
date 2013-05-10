@@ -126,3 +126,7 @@ fi
 if [ -f ~/.git_svn_bash_prompt ]; then
   . ~/.git_svn_bash_prompt
 fi
+
+if [ -d ~/.git-mods ]; then
+  PATH="$PATH:$HOME/.git-mods"
+fi

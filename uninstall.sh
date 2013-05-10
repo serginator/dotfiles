@@ -17,5 +17,6 @@ mv $BACKUP/.git-sh-prompt .
 mv $BACKUP/.git_svn_bash_prompt .
 rm -rf $BACKUP
 rm -rf ~/.unix-tools
+rm -rf ~/.git-mods
 
 echo -e "DONE"
