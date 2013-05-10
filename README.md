@@ -22,7 +22,7 @@ It will restore your `~/.dotfiles_backup`
 ## Linked to my [unix-tools](https://github.com/serginator/unix-tools) repo
 It will add two aliases, one for updating your system and security applications (`actualizator`), and another to crack WEP wifis easily (`wepcrackeator`)
 
-## Added some scripts from visionmedia/git-extras
+## Added some scripts from [visionmedia/git-extras](https://github.com/visionmedia/git-extras)
 I've added some of them, looked useful to me :)
 ### git-alias
 Define, search and show aliases
