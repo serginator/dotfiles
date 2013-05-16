@@ -21,7 +21,7 @@
   sh = stash
   unsh = stash pop
   lg = "log --graph --pretty=format:'%Cred%h%Creset - %C(bold blue)<%an>%Creset %C(yellow)%d%Creset %s %Cgreen(%cr)' --abbrev-commit --date=relative"
-  prune = remote prune origin ; Removes local branches that dont't exist remotely
+  prunebranches = remote prune origin ; Removes local branches that dont't exist remotely
   back = checkout -
 
   ; PDI FLOW

@@ -130,3 +130,7 @@ fi
 if [ -d ~/.git-mods ]; then
   PATH="$PATH:$HOME/.git-mods"
 fi
+
+if [ -d /opt/android-studio ]; then
+  PATH="$PATH:/opt/android-studio/bin"
+fi
