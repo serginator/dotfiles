@@ -1,4 +1,4 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
+# ~/.bashrc: executed by bash(1) for non-login shell
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
@@ -133,4 +133,8 @@ fi
 
 if [ -d /opt/android-studio ]; then
   PATH="$PATH:/opt/android-studio/bin"
+fi
+
+if [ -d ~/nvm ]; then
+  . ~/nvm/nvm.sh
 fi
