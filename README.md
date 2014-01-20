@@ -71,3 +71,5 @@ Remove the latest commits or the latest <number> commits
 
 Sometimes you have to use a computer that is not yours, and we are all used to our aliases, which makes us forget the real commands.
 If you install and uninstall your scripts keeping a backup of the older ones, you can use your aliases everywhere :)
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/serginator/dotfiles/trend.png)](https://bitdeli.com/free "Bitdeli Badge")

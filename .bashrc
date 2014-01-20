@@ -127,6 +127,10 @@ if [ -f ~/.git_svn_bash_prompt ]; then
   . ~/.git_svn_bash_prompt
 fi
 
+if [ -d ~/.nvm ]; then
+  . ~/.nvm/nvm.sh
+fi
+
 if [ -d ~/.git-mods ]; then
   PATH="$PATH:$HOME/.git-mods"
 fi
@@ -135,8 +139,8 @@ if [ -d /opt/android-studio ]; then
   PATH="$PATH:/opt/android-studio/bin"
 fi
 
-if [ -d ~/.nvm ]; then
-  . ~/.nvm/nvm.sh
+if [ -d /opt/phpStorm ]; then
+  PATH="$PATH:/opt/phpStorm/bin"
 fi
 
 if [ -d /opt/vertx ]; then
