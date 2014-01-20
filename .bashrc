@@ -135,6 +135,12 @@ if [ -d /opt/android-studio ]; then
   PATH="$PATH:/opt/android-studio/bin"
 fi
 
-if [ -d ~/nvm ]; then
-  . ~/nvm/nvm.sh
+if [ -d ~/.nvm ]; then
+  . ~/.nvm/nvm.sh
 fi
+
+if [ -d /opt/vertx ]; then
+  PATH="$PATH:/opt/vertx/bin"
+fi
+
+eval "$(grunt --completion=bash)"
