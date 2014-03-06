@@ -127,6 +127,10 @@ if [ -f ~/.git_svn_bash_prompt ]; then
   . ~/.git_svn_bash_prompt
 fi
 
+if [ -d ~/.nvm ]; then
+  . ~/.nvm/nvm.sh
+fi
+
 if [ -d ~/.git-mods ]; then
   PATH="$PATH:$HOME/.git-mods"
 fi
@@ -139,12 +143,10 @@ if [ -d /opt/phpStorm ]; then
   PATH="$PATH:/opt/phpStorm/bin"
 fi
 
-if [ -d ~/nvm ]; then
-  . ~/nvm/nvm.sh
-fi
-
 if [ -d /opt/vertx ]; then
   PATH="$PATH:/opt/vertx/bin"
 fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+eval "$(grunt --completion=bash)"
