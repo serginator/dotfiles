@@ -147,4 +147,6 @@ if [ -d /opt/vertx ]; then
   PATH="$PATH:/opt/vertx/bin"
 fi
 
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
 eval "$(grunt --completion=bash)"

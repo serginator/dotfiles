@@ -11,7 +11,7 @@ REMOTE_BRANCHES=(${REMOTE_BRANCHES[@]/origin\//""})
 result=""
 function item_index {
     local element=$1
-    
+
     for i in "${!REMOTE_BRANCHES[@]}"; do
         if [ ${REMOTE_BRANCHES[$i]} == $element ]; then
             result=$i
@@ -37,7 +37,7 @@ function process_branches {
             fi
         else
             echo -e "$branch <- ${BLUE}(Remote OK)${RESTORE}"
-        fi 
+        fi
     done
 }
 
