@@ -139,14 +139,14 @@ if [ -d /opt/android-studio ]; then
   PATH="$PATH:/opt/android-studio/bin"
 fi
 
-if [ -d /opt/phpStorm ]; then
-  PATH="$PATH:/opt/phpStorm/bin"
-fi
+#if [ -d /opt/phpStorm ]; then
+#  PATH="$PATH:/opt/phpStorm/bin"
+#fi
 
 if [ -d /opt/vertx ]; then
   PATH="$PATH:/opt/vertx/bin"
 fi
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+#PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 eval "$(grunt --completion=bash)"
