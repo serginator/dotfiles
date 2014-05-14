@@ -16,6 +16,8 @@ ln $DOTS_FOLDER/.bashrc .
 ln $DOTS_FOLDER/.gitconfig .
 ln $DOTS_FOLDER/.git-sh-prompt .
 ln $DOTS_FOLDER/.git_svn_bash_prompt .
+rm ~/.unix-tools
+rm ~/.git-mods
 ln -s $DOTS_FOLDER/unix-tools ~/.unix-tools
 ln -s $DOTS_FOLDER/git-mods ~/.git-mods
 
