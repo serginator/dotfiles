@@ -42,3 +42,4 @@ let g:solarized_termcolors=256
 set background=dark
 colorscheme solarized
 
+au BufRead,BufNewFile *.md set filetype=markdown
