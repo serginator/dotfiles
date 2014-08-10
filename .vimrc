@@ -48,4 +48,15 @@ let g:solarized_termcolors=256
 set background=dark
 colorscheme solarized
 
+"autocmd event pattern command
 au BufRead,BufNewFile *.md set filetype=markdown
+
+augroup HTML Cmds
+  autocmd BufRead,BufWritePre *.html normal gg=G
+  au Filetype html nnoremap <leader>c I<!--<esc>A--><esc>
+augroup
+
+augroup JavaScript Cmds
+  au Filetype javacript nnoremap <leader>r :!node %<cr>
+  au Filetype javascript nnoremap <leader>c I//<esc>
+augroup
