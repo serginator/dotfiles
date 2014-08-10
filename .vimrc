@@ -26,11 +26,6 @@ set fileencoding=utf-8
 set encoding=utf-8
 set backspace=indent,eol,start
 
-"set winwidth=84
-"set winheight=15
-"set winminheight=15
-"set winminwidth=15
-
 set number
 set noswapfile
 set visualbell
@@ -41,6 +36,7 @@ set hidden
 set history=1000
 set undolevels=1000
 set title
+let mapleader = ","
 
 set cc=80
 
@@ -51,12 +47,19 @@ colorscheme solarized
 "autocmd event pattern command
 au BufRead,BufNewFile *.md set filetype=markdown
 
-augroup HTML Cmds
+augroup HTML
   autocmd BufRead,BufWritePre *.html normal gg=G
   au Filetype html nnoremap <leader>c I<!--<esc>A--><esc>
-augroup
+  au FileType html set omnifunc=htmlcomplete#CompleteTags
+augroup END
 
-augroup JavaScript Cmds
-  au Filetype javacript nnoremap <leader>r :!node %<cr>
+augroup CSS
+  autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+augroup END
+
+augroup JavaScript
+  au Filetype javascript nnoremap <leader>r :!node %<cr>
   au Filetype javascript nnoremap <leader>c I//<esc>
-augroup
+  au FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+augroup END
+
