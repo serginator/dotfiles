@@ -34,7 +34,13 @@ set backspace=indent,eol,start
 set number
 set noswapfile
 set visualbell
+set noerrorbells
 set cursorline
+set nowrap
+set hidden
+set history=1000
+set undolevels=1000
+set title
 
 set cc=80
 
