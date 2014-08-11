@@ -31,7 +31,7 @@ set noswapfile
 set visualbell
 set noerrorbells
 set cursorline
-set nowrap
+"set nowrap
 set hidden
 set history=1000
 set undolevels=1000

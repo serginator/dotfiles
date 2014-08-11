@@ -1,10 +1,14 @@
-[submodule "unix-tools"]
-	path = unix-tools
-	url = git@github.com:serginator/unix-tools.git
+[submodule "emmet-vim"]
+    path = .vim/bundle/emmet-vim
+    url = git@github.com:mattn/emmet-vim.git
 
 [submodule "github-scheme"]
 	path = .vim/bundle/github-scheme
 	url = git@github.com:endel/vim-github-colorscheme.git 
+
+[submodule "HTML-AutoCloseTag"]
+    path = .vim/bundle/HTML-AutoCloseTag
+    url = git@github.com:ypid/HTML-AutoCloseTag.git
 
 [submodule "nerdtree"]
 	path = .vim/bundle/nerdtree
@@ -14,7 +18,43 @@
 	path = .vim/bundle/supertab
 	url = git@github.com:vim-scripts/supertab.git
 
+[submodule "syntastic"]
+	path = .vim/bundle/syntastic
+	url = git@github.com:scrooloose/syntastic.git
+
+[submodule "underscore-templates.vim"]
+	path = .vim/bundle/underscore-templates.vim
+	url = git@github.com:aaronj1335/underscore-templates.vim.git 
+
+[submodule "unix-tools"]
+	path = unix-tools
+	url = git@github.com:serginator/unix-tools.git
+    
+[submodule "vim-coffee-script"]
+	path = .vim/bundle/vim-coffee-script
+	url = git@github.com:kchmck/vim-coffee-script.git
+    
 [submodule "vim-colors-solarized"]
     path = .vim/bundle/vim-colors-solarized
 	url = git@github.com:altercation/vim-colors-solarized.git
 
+[submodule "vim-gitgutter"]
+	path = .vim/bundle/vim-gitgutter
+	url = git://github.com/airblade/vim-gitgutter.git
+    
+[submodule "vim-jade"]
+	path = .vim/bundle/vim-jade
+	url = git://github.com/digitaltoad/vim-jade.git
+    
+[submodule "vim-javascript"]
+	path = .vim/bundle/vim-javascript
+	url = git@github.com:pangloss/vim-javascript.git
+    
+[submodule "vim-less"]
+	path = .vim/bundle/vim-less
+	url = git://github.com/lunaru/vim-less.git
+    
+[submodule "vim-stylus"]
+	path = .vim/bundle/vim-stylus
+	url = git://github.com/wavded/vim-stylus.git
+    
