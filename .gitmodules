@@ -8,7 +8,7 @@
 
 [submodule "HTML-AutoCloseTag"]
     path = .vim/bundle/HTML-AutoCloseTag
-    url = git@github.com:ypid/HTML-AutoCloseTag.git
+    url = git://github.com/ypid/HTML-AutoCloseTag.git
 
 [submodule "nerdtree"]
 	path = .vim/bundle/nerdtree
@@ -48,7 +48,7 @@
     
 [submodule "vim-javascript"]
 	path = .vim/bundle/vim-javascript
-	url = git@github.com:pangloss/vim-javascript.git
+	url = git://github.com/pangloss/vim-javascript.git
     
 [submodule "vim-less"]
 	path = .vim/bundle/vim-less
