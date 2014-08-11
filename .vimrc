@@ -25,18 +25,24 @@ set autoindent
 set fileencoding=utf-8
 set encoding=utf-8
 set backspace=indent,eol,start
+set scrolloff=7
+set wildmenu
 
 set number
 set noswapfile
 set visualbell
 set noerrorbells
 set cursorline
-"set nowrap
+set wrap
+set linebreak
+set showbreak=>\
 set hidden
 set history=1000
 set undolevels=1000
+"set undofile
 set title
 let mapleader = ","
+set mouse=a
 
 set cc=80
 
@@ -45,36 +51,45 @@ set background=dark
 colorscheme solarized
 
 "Map NERDTree to <leader>p
-nmap <silent> <Leader>p :NERDTreeToggle<CR>
+nnoremap <silent> <Leader>p :NERDTreeToggle<CR>
 
 "autocmd event pattern command
-au BufRead,BufNewFile *.md set filetype=markdown
+autocmd BufRead,BufNewFile *.md set filetype=markdown
 
 augroup HTML
-  autocmd FileType html set sw=2
-  autocmd FileType html set ts=2
-  autocmd FileType html set sts=2
-  autocmd FileType html set textwidth=0
+  autocmd FileType html setlocal sw=2
+  autocmd FileType html setlocal ts=2
+  autocmd FileType html setlocal sts=2
+  autocmd FileType html setlocal textwidth=0
   autocmd BufRead,BufWritePre *.html normal gg=G
-  au Filetype html nnoremap <leader>c I<!--<esc>A--><esc>
-  au FileType html set omnifunc=htmlcomplete#CompleteTags
+  autocmd Filetype html nnoremap <buffer> <leader>c I<!--<esc>A--><esc>
+  autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
 augroup END
 
 augroup CSS
-  autocmd FileType css set sw=2
-  autocmd FileType css set ts=2
-  autocmd FileType css set sts=2
-  autocmd FileType css set textwidth=79
-  autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+  autocmd FileType css setlocal sw=2
+  autocmd FileType css setlocal ts=2
+  autocmd FileType css setlocal sts=2
+  autocmd FileType css setlocal textwidth=79
+  autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 augroup END
 
 augroup JavaScript
-  autocmd FileType javascript set sw=4
-  autocmd FileType javascript set ts=4
-  autocmd FileType javascript set sts=4
-  autocmd FileType javascript set textwidth=79
-  au Filetype javascript nnoremap <leader>r :!node %<cr>
-  au Filetype javascript nnoremap <leader>c I//<esc>
-  au FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+  autocmd FileType javascript setlocal sw=4
+  autocmd FileType javascript setlocal ts=4
+  autocmd FileType javascript setlocal sts=4
+  autocmd FileType javascript setlocal textwidth=79
+  autocmd Filetype javascript nnoremap <buffer> <leader>r :!node %<cr>
+  autocmd Filetype javascript nnoremap <buffer> <leader>c I//<esc>
+  autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 augroup END
 
+"Force to use hjkl to learn
+noremap <left> <nop>
+noremap <right> <nop>
+noremap <up> <nop>
+noremap <down> <nop>
+nnoremap / /\v
+vnoremap / /\v
+nnoremap ? ?\v
+vnoremap ? ?\v
