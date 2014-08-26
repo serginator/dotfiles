@@ -59,6 +59,9 @@
 [url "http://github.com/"]
   insteadOf = "gh:"
 
+[url "http://pdihub.hi.inet/"]
+  insteadOf = "ph:"
+
 [url "git@github.com:"]
   insteadOf = "https://github.com/"
   insteadOf = "http://github.com/"
