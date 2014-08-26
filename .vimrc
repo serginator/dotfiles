@@ -43,6 +43,7 @@ set undolevels=1000
 set title
 let mapleader = ","
 set mouse=a
+set pastetoggle=<F2>
 
 set cc=80
 
