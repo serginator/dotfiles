@@ -45,6 +45,7 @@ set titleold=""
 set titlestring=VIM:\ %F
 let mapleader = ","
 set mouse=a
+set pastetoggle=<F2>
 
 set cc=80
 
