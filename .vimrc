@@ -64,7 +64,7 @@ augroup HTML
   autocmd FileType html setlocal ts=2
   autocmd FileType html setlocal sts=2
   autocmd FileType html setlocal textwidth=0
-  autocmd BufRead,BufWritePre *.html normal gg=G
+  "autocmd BufRead,BufWritePre *.html normal gg=G
   autocmd Filetype html nnoremap <buffer> <leader>c I<!--<esc>A--><esc>
   autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
 augroup END
