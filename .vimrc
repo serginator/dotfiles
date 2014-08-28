@@ -41,6 +41,8 @@ set history=1000
 set undolevels=1000
 "set undofile
 set title
+set titleold=""
+set titlestring=VIM:\ %F
 let mapleader = ","
 set mouse=a
 
