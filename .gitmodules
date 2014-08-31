@@ -56,6 +56,9 @@
 [submodule "html-autoclosetag"]
 	path = .vim/bundle/html-autoclosetag
 	url = https://github.com/ypid/HTML-AutoCloseTag.git
+[submodule "snipmate.git"]
+	path = .vim/bundle/snipmate
+	url = https://github.com/msanders/snipmate.git
 [submodule "snipmate.vim"]
-    path = .vim/bundle/snipmate.vim
-    url = https://github.com/msanders/snipmate.vim.git
+	path = snipmate.vim
+	url = https://github.com/msanders/snipmate.vim.git
