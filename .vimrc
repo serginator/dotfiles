@@ -1,12 +1,12 @@
+"Pathogen
+execute pathogen#infect()
+
 set nocompatible
 
 filetype on
 filetype indent on
 filetype plugin on
 "set t_Co=256
-
-"Pathogen
-execute pathogen#infect()
 
 syntax on
 
@@ -61,6 +61,11 @@ nnoremap <silent> <Leader>p :NERDTreeToggle<CR>
 
 "autocmd event pattern command
 autocmd BufRead,BufNewFile *.md set filetype=markdown
+
+augroup vimscript
+    autocmd!
+    autocmd BufWritePost %MYVIMRC source $MYVIMRC
+augroup END
 
 "Force to use hjkl to learn
 noremap <left> <nop>
