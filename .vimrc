@@ -59,34 +59,6 @@ nnoremap <silent> <Leader>p :NERDTreeToggle<CR>
 "autocmd event pattern command
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 
-augroup HTML
-  autocmd FileType html setlocal sw=2
-  autocmd FileType html setlocal ts=2
-  autocmd FileType html setlocal sts=2
-  autocmd FileType html setlocal textwidth=0
-  "autocmd BufRead,BufWritePre *.html normal gg=G
-  autocmd Filetype html nnoremap <buffer> <leader>c I<!--<esc>A--><esc>
-  autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
-augroup END
-
-augroup CSS
-  autocmd FileType css setlocal sw=2
-  autocmd FileType css setlocal ts=2
-  autocmd FileType css setlocal sts=2
-  autocmd FileType css setlocal textwidth=79
-  autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-augroup END
-
-augroup JavaScript
-  autocmd FileType javascript setlocal sw=4
-  autocmd FileType javascript setlocal ts=4
-  autocmd FileType javascript setlocal sts=4
-  autocmd FileType javascript setlocal textwidth=79
-  autocmd Filetype javascript nnoremap <buffer> <leader>r :!node %<cr>
-  autocmd Filetype javascript nnoremap <buffer> <leader>c I//<esc>
-  autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-augroup END
-
 "Force to use hjkl to learn
 noremap <left> <nop>
 noremap <right> <nop>
