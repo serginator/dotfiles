@@ -85,3 +85,15 @@ cnoreabbrev W w
 cnoreabbrev Q q
 cnoreabbrev wrap set wrap
 cnoreabbrev nowrap set nowrap
+
+function! InsertTabWrapper()
+    let col = col(".") - 1
+    if !col || getline(".")[col -1] !~ '\k'
+        return "\<tab>"
+    else
+        return "\<c-n>"
+endfunction
+
+inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <s-tab> <c-p>
+
