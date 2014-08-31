@@ -5,3 +5,6 @@ setlocal textwidth=79
 nnoremap <buffer> <leader>r :!node %<cr>
 nnoremap <buffer> <leader>c I//<esc>
 setlocal omnifunc=javascriptcomplete#CompleteJS
+
+"abbreviations
+inoreabbrev fn function

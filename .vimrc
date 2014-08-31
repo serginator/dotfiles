@@ -53,6 +53,9 @@ let g:solarized_termcolors=256
 set background=dark
 colorscheme solarized
 
+set laststatus=2
+set statusline=%f\ \ line:%l/%L\ col:%c\ %p%%\ %y
+
 "Map NERDTree to <leader>p
 nnoremap <silent> <Leader>p :NERDTreeToggle<CR>
 
@@ -68,3 +71,12 @@ nnoremap / /\v
 vnoremap / /\v
 nnoremap ? ?\v
 vnoremap ? ?\v
+
+"Some abbreviations to fix common writting errors
+inoreabbrev teh the
+cnoreabbrev Wq wq
+cnoreabbrev WQ wq
+cnoreabbrev W w
+cnoreabbrev Q q
+cnoreabbrev wrap set wrap
+cnoreabbrev nowrap set nowrap
