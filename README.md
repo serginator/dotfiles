@@ -6,6 +6,8 @@ My dotfiles
 ```
 git clone git@github.com:serginator/dotfiles.git
 cd dotfiles
+git submodule init
+git submodule update
 ./install.sh
 ```
 
