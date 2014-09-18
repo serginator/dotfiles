@@ -96,4 +96,5 @@ cnoreabbrev nowrap set nowrap
 "inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 "inoremap <s-tab> <c-p>
 
+let g:SuperTabDefaultCompletionType = "<c-n>"
 
