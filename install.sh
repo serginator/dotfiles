@@ -12,12 +12,14 @@ mv .gitconfig $BACKUP_FOLDER
 mv .git-sh-prompt $BACKUP_FOLDER
 mv .git_svn_bash_prompt $BACKUP_FOLDER
 mv .vimrc $BACKUP_FOLDER
+mv .bowerrc $BACKUP_FOLDER
 ln $DOTS_FOLDER/.bash_aliases .
 ln $DOTS_FOLDER/.bashrc .
 ln $DOTS_FOLDER/.gitconfig .
 ln $DOTS_FOLDER/.git-sh-prompt .
 ln $DOTS_FOLDER/.git_svn_bash_prompt .
 ln $DOTS_FOLDER/.vimrc .
+ln $DOTS_FOLDER/.bowerrc .
 rm ~/.unix-tools
 rm ~/.git-mods
 rm ~/.vim
