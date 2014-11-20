@@ -4,6 +4,8 @@
 DOTS_FOLDER=`pwd`
 BACKUP_FOLDER=".dotfiles_backup"
 
+git submodule init
+git submodule update
 cd ~
 mkdir $BACKUP_FOLDER
 mv .bash_aliases $BACKUP_FOLDER
