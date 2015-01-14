@@ -58,3 +58,6 @@
 	path = .vim/bundle/html-autoclosetag
 	url = https://github.com/ypid/HTML-AutoCloseTag.git
 
+[submodule ".vim/bundle/zeavim"]
+	path = .vim/bundle/zeavim
+	url = https://github.com/KabbAmine/zeavim.vim.git
