@@ -179,3 +179,12 @@ fi
 if [ -d /usr/local/heroku ]; then
     export PATH="/usr/local/heroku/bin:$PATH"
 fi
+
+export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
+
+if [ -f ~/.3ds-oneliners ]; then
+    . .3ds-oneliners
+fi
+if [ -f /etc/bash_completion.d/password-store ]; then
+    source /etc/bash_completion.d/password-store
+fi
