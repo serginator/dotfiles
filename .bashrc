@@ -129,6 +129,8 @@ fi
 
 if [ -d ~/.nvm ]; then
   . ~/.nvm/nvm.sh
+  export NODE_PATH=$NODE_PATH:/home/serginator/node_modules
+  nvm use stable
 fi
 
 if [ -d ~/.git-mods ]; then
