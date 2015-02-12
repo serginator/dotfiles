@@ -78,3 +78,7 @@
 
 [color]
   ui = true
+
+[hub]
+  host = pdihub.hi.inet
+

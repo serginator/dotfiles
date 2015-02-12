@@ -181,3 +181,9 @@ fi
 if [ -d /usr/local/heroku ]; then
     export PATH="/usr/local/heroku/bin:$PATH"
 fi
+
+# Go
+if [ -d /usr/local/go ]; then
+    export PATH="/usr/local/go/bin:$PATH"
+fi
+
