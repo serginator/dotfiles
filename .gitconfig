@@ -32,6 +32,9 @@
   track = "! git for-each-ref --format=\"%(refname:short) <- %(upstream:short)\" refs/heads | awk -F \"<-\" '{ printf $1 \"\\033[1;34m\" \"<- \"; if ($2 == \" \") printf \"\\033[1;31m(No tracking branch)\"; else printf $2; print \"\\033[0m\"}'"
   revertacommit = reset --hard HEAD~1
   desc = "! f() { git stash --quiet --include-untracked;BRANCH=\"develop\";if [ -n \"$1\" ]; then BRANCH=\"$1\"; fi;git checkout \"$BRANCH\" --quiet;git pull --quiet origin \"$BRANCH\";git describe;git checkout - --quiet;git stash pop --quiet; }; f"
+  listmergedbranches = "! git branch -r --merged | grep -v '\\*\\|master\\|develop\\|release' | sed 's/origin\\///'"
+  removemergedbranches = "listmergedbranches | xargs -n 1 git push --delete origin; git fetch origin --prune"
+  removelocalmergedbranches = "! git branch -l --merged | grep -v '\\*\\|master\\|develop\\|release' | xargs -n 1 git branch -d"
 
   ; usage: git cim "My commit message" <other commit params>
   cim = "! f() { MESSAGE=\"$1\"; shift; BRANCH=`git rev-parse --abbrev-ref HEAD`; ISSUE=`echo \"$BRANCH\" | grep -E '*\\/TVAPPS-[\\d]+*' | cut -d \"-\" -f 2`; if [ -n \"${ISSUE}\" ]; then MESSAGE=\"TVAPPS-$ISSUE $MESSAGE\"; fi; git commit -m\"$MESSAGE\" $@; }; f"
