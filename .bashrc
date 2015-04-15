@@ -177,6 +177,17 @@ else
     start_agent;
 fi
 
+# gpg-agent for ssh
+# execute this first manually
+# eval `gpg-agent --daemon --scdaemon-program /usr/bin/scdaemon \
+#    --write-env-file --use-standard-socket \
+#    --default-cache-ttl 43200 \
+#    --enable-ssh-support --default-cache-ttl-ssh 43200`
+
+#and then let this line uncommented
+#. ~/.gpg-agent-info
+
+
 ### Added by the Heroku Toolbelt
 if [ -d /usr/local/heroku ]; then
     export PATH="/usr/local/heroku/bin:$PATH"
@@ -190,7 +201,7 @@ fi
 export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
 
 if [ -f ~/.3ds-oneliners ]; then
-    . .3ds-oneliners
+    . ~/.3ds-oneliners
 fi
 if [ -f /etc/bash_completion.d/password-store ]; then
     source /etc/bash_completion.d/password-store
