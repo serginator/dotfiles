@@ -127,11 +127,12 @@ if [ -f ~/.git_svn_bash_prompt ]; then
   . ~/.git_svn_bash_prompt
 fi
 
-if [ -d ~/.nvm ]; then
-  . ~/.nvm/nvm.sh
-  export NODE_PATH=$NODE_PATH:/home/serginator/node_modules
-  nvm use stable
-fi
+# Commented if using https://github.com/xtuple/nvm
+#if [ -d ~/.nvm ]; then
+#  . ~/.nvm/nvm.sh
+#  export NODE_PATH=$NODE_PATH:/home/serginator/node_modules
+#  nvm use stable
+#fi
 
 if [ -d ~/.git-mods ]; then
   PATH="$PATH:$HOME/.git-mods"
