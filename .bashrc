@@ -208,3 +208,4 @@ if [ -f /etc/bash_completion.d/password-store ]; then
     source /etc/bash_completion.d/password-store
 fi
 
+PS1="(`hostname`)"$PS1
