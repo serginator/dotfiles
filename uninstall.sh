@@ -10,11 +10,17 @@ rm .bashrc
 rm .gitconfig
 rm .git-sh-prompt
 rm .git_svn_bash_prompt
+rm .vimrc
+rm .bowerrc
+rm .screenrc
 mv $BACKUP/.bash_aliases .
 mv $BACKUP/.bashrc .
 mv $BACKUP/.gitconfig .
 mv $BACKUP/.git-sh-prompt .
 mv $BACKUP/.git_svn_bash_prompt .
+mv $BACKUP/.vimrc .
+mv $BACKUP/.bowerrc .
+mv $BACKUP/.screenrc .
 rm -rf $BACKUP
 rm -rf ~/.unix-tools
 rm -rf ~/.git-mods
