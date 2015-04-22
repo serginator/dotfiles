@@ -18,6 +18,7 @@ alias getlargestfiles='! f() { du -a $1 | sort -n -r | head -n 10; }; f'
 alias getInterfaceInfo='! f() { nmcli dev list iface $1; }; f'
 alias getBatteryInfo='upower -i `upower -e | grep "BAT"` | grep -E "time|percentage"'
 alias screenttyusb0='screen /dev/ttyUSB0 115200'
+alias grunt-debug='! f() { node-debug $(which grunt) $1; }; f'
 
 killPattern() {
   ps aux | grep $1 | awk '{print $2}' | xargs kill -9
