@@ -23,5 +23,4 @@ alias grunt-debug='! f() { node-debug $(which grunt) $1; }; f'
 killPattern() {
   ps aux | grep $1 | awk '{print $2}' | xargs kill -9
 }
-alias killpattern=killPattern
 
