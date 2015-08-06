@@ -20,6 +20,8 @@ alias getBatteryInfo='upower -i `upower -e | grep "BAT"` | grep -E "time|percent
 alias screenttyusb0='sudo chmod 777 /dev/ttyUSB0 && screen /dev/ttyUSB0 115200'
 alias grunt-debug='! f() { node-debug $(which grunt) $1; }; f'
 alias cls='echo -e \\033c'
+alias g='git'
+alias gr='grunt'
 
 killPattern() {
   ps aux | grep $1 | awk '{print $2}' | xargs kill -9
