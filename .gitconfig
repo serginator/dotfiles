@@ -4,6 +4,7 @@
 
 [core]
   editor = vim
+  excludesfile = ~/.gitignore
 
 [merge]
   tool = diff
@@ -39,7 +40,7 @@
   search="! f() { git lg -i --grep=$1; }; f"
 
   ; usage: git cim "My commit message" <other commit params>
-  cim ="! f() { JIRA_PROJECT=`cat .jira-project`; MESSAGE=\"$1\"; shift; BRANCH=`git rev-parse --abbrev-ref HEAD`; if [ -n \"$JIRA_PROJECT\" ]; then ISSUE=`echo \"$BRANCH\" | grep -E \"$JIRA_PROJECT-[\\d]*\" | cut -d \"-\" -f 2`; fi; if [ -n \"${ISSUE}\" ]; then MESSAGE=\"$JIRA_PROJECT-$ISSUE $MESSAGE\"; fi; git commit -m\"$MESSAGE\" $@; }; f"  
+  cim ="! f() { JIRA_PROJECT=`cat .jira-project`; MESSAGE=\"$1\"; shift; BRANCH=`git rev-parse --abbrev-ref HEAD`; if [ -n \"$JIRA_PROJECT\" ]; then ISSUE=`echo \"$BRANCH\" | grep -E \"$JIRA_PROJECT-[\\d]*\" | cut -d \"-\" -f 2`; fi; if [ -n \"${ISSUE}\" ]; then MESSAGE=\"$JIRA_PROJECT-$ISSUE $MESSAGE\"; fi; git commit -m\"$MESSAGE\" $@; }; f"
   dev = "! git checkout develop; git pull origin develop"
   ; usage: git new-branch feature 1234 short-desc // feature/TVAPPS-1234-short-desc
   ; usage: git new-branch feature short-desc // feature/short-desc
