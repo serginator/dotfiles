@@ -208,4 +208,7 @@ if [ -f /etc/bash_completion.d/password-store ]; then
     source /etc/bash_completion.d/password-store
 fi
 
+source /usr/share/bash-completion/completions/git
+complete -o default -o nospace -F _git g
+
 PS1="(`hostname`)"$PS1
