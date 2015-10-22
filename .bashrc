@@ -211,4 +211,9 @@ fi
 source /usr/share/bash-completion/completions/git
 complete -o default -o nospace -F _git g
 
+if [ -d ~/cowfiles ]; then
+    export COWPATH="$COWPATH:$HOME/cowfiles"
+fi
+
+
 PS1="(`hostname`)"$PS1
