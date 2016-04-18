@@ -215,5 +215,6 @@ if [ -d ~/cowfiles ]; then
     export COWPATH="$COWPATH:$HOME/cowfiles"
 fi
 
+export IBUS_ENABLE_SYNC_MODE=1
 
 PS1="(`hostname`)"$PS1
