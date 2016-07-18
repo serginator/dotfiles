@@ -1,7 +1,7 @@
 alias please='sudo'
 alias ls='ls -aF --color=always'
 alias ll='ls -l'
-alias update='sudo apt-get update && sudo apt-get upgrade -y && sudo npm upgrade -g && sudo n stable'
+alias update='sudo apt-get update && sudo apt-get upgrade -y && sudo npm upgrade -g && sudo n 5.11'
 alias actualizator='please ~/.unix-tools/actualizator.sh'
 alias dist-upgrade='sudo apt-get update && sudo apt-get dist-upgrade'
 alias install='sudo apt-get install'
