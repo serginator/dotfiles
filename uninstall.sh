@@ -13,6 +13,7 @@ rm .git_svn_bash_prompt
 rm .vimrc
 rm .bowerrc
 rm .screenrc
+rm .editorconfig
 mv $BACKUP/.bash_aliases .
 mv $BACKUP/.bashrc .
 mv $BACKUP/.gitconfig .
@@ -21,6 +22,7 @@ mv $BACKUP/.git_svn_bash_prompt .
 mv $BACKUP/.vimrc .
 mv $BACKUP/.bowerrc .
 mv $BACKUP/.screenrc .
+mv $BACKUP/.editorconfig .
 rm -rf $BACKUP
 rm -rf ~/.unix-tools
 rm -rf ~/.git-mods
