@@ -6,8 +6,14 @@
   editor = vim
   excludesfile = ~/.gitignore
 
+[submodule]
+  fetchJobs = 4
+
 [merge]
   tool = diff
+
+[diff]
+  compactionHeuristic = true
 
 [alias]
   add = add -u
@@ -39,9 +45,11 @@
   whodidthat="! f() { LINE=$1 FILE=$2 REVS=$3; for commit in $(git rev-list -n $REVS HEAD $FILE); do git blame -n -L$LINE,+1 $commit -- $FILE; done; }; f" ;git whodidthat 7 file.txt 3 ----> return 3 revs of who touched line 7 in file.txt
   search="! f() { git lg -i --grep=$1; }; f"
   resettags="! f() { git tag -d $(git tag) && git fetch --tags; }; f"
+  # (review this) tar="! f() { BR=`git rev-parse --abbrev-ref HEAD`; OUT=`echo $BR | sed -E 's/\//--/'`; git archive $BR --format=tar --output=$OUT.tar; }; f"
 
   ; usage: git cim "My commit message" <other commit params>
   cim ="! f() { JIRA_PROJECT=`cat .jira-project`; MESSAGE=\"$1\"; shift; BRANCH=`git rev-parse --abbrev-ref HEAD`; if [ -n \"$JIRA_PROJECT\" ]; then ISSUE=`echo \"$BRANCH\" | grep -E \"$JIRA_PROJECT-[\\d]*\" | cut -d \"-\" -f 2`; fi; if [ -n \"${ISSUE}\" ]; then MESSAGE=\"$JIRA_PROJECT-$ISSUE $MESSAGE\"; fi; git commit -m\"$MESSAGE\" $@; }; f"
+  new-cim ="! f() { MESSAGE=\"$1\"; shift; BRANCH=`git rev-parse --abbrev-ref HEAD`; JIRA_PROJECT=`echo \"$BRANCH\" | grep -Eo \"\\/(\\w+)\" | grep -Eo \"[^\\/]+\"`; if [ -n \"$JIRA_PROJECT\" ]; then ISSUE=`echo \"$BRANCH\" | grep -E \"$JIRA_PROJECT-[\\d]*\" | cut -d \"-\" -f 2`; fi; if [ -n \"${ISSUE}\" ]; then MESSAGE=\"$JIRA_PROJECT-$ISSUE $MESSAGE\"; fi; git commit -m\"$MESSAGE\" $@; }; f"
   dev = "! git checkout master; git pull origin master"
   ; usage: git new-branch feature 1234 short-desc // feature/TVAPPS-1234-short-desc
   ; usage: git new-branch feature short-desc // feature/short-desc
@@ -56,7 +64,9 @@
   delbranch = "! f() { git dev; git br -d $1; git push origin :$1; }; f"
   renamebranch = "! f() { git branch -m $1 $2; git push origin :$1; git push --set-upstream origin $2; }; f"
   mergedev = "! git dev; git checkout -; git update; git merge master"
+
   save-work = "! f() { path=`git rev-parse --show-toplevel`;repo=`basename $path`;mkdir -p ~/Dropbox/AURIGAE/git-work/$repo;git diff > ~/Dropbox/AURIGAE/git-work/$repo/last-day;echo `git rev-parse --abbrev-ref HEAD` > ~/Dropbox/AURIGAE/git-work/$repo/branch-name; }; f"
+
   restart-work = "! f() { path=`git rev-parse --show-toplevel`;repo=`basename $path`;git co master;git pull;git co `cat ~/Dropbox/AURIGAE/git-work/$repo/branch-name`;git update;git apply ~/Dropbox/AURIGAE/git-work/$repo/last-day; }; f"
 
   ; Aux alias (used by other alias)
@@ -65,22 +75,19 @@
   srs30 = !git config user.name "Sergio Ruiz" && git config user.email sergio.ruiz@aurigae.com
   serginator = !git config user.name "Sergio Ruiz" && git config user.email serginator@gmail.com
 
-[url "http://github.com/"]
-  insteadOf = "gh:"
+#[url "http://github.com/"]
+#  insteadOf = "gh:"
 
-[url "http://pdihub.hi.inet/"]
-  insteadOf = "ph:"
+#[url "git@github.com:"]
+#  insteadOf = "https://github.com/"
+#  insteadOf = "http://github.com/"
+#  insteadOf = "gh:"
 
-[url "git@github.com:"]
-  insteadOf = "https://github.com/"
-  insteadOf = "http://github.com/"
-  insteadOf = "gh:"
+#[url "git@github.com:serginator/"]
+#  insteadOf = "gs:"
 
-[url "git@github.com:serginator/"]
-  insteadOf = "gs:"
-
-[url "http://github.com/serginator/"]
-  insteadOf = "gs:"
+#[url "http://github.com/serginator/"]
+#  insteadOf = "gs:"
 
 [push]
   default = current
@@ -89,13 +96,4 @@
   ui = true
 
 [hub]
-  host = pdihub.hi.inet
-
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	required = true
-
-[credential]
-	helper = store
-
+  host = github.com
