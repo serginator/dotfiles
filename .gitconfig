@@ -65,9 +65,9 @@
   renamebranch = "! f() { git branch -m $1 $2; git push origin :$1; git push --set-upstream origin $2; }; f"
   mergedev = "! git dev; git checkout -; git update; git merge master"
 
-  save-work = "! f() { path=`git rev-parse --show-toplevel`;repo=`basename $path`;mkdir -p ~/Dropbox/AURIGAE/git-work/$repo;git diff > ~/Dropbox/AURIGAE/git-work/$repo/last-day;echo `git rev-parse --abbrev-ref HEAD` > ~/Dropbox/AURIGAE/git-work/$repo/branch-name; }; f"
+  save-work = "! f() { path=`git rev-parse --show-toplevel`;repo=`basename $path`;mkdir -p ~/Dropbox/git-work/$repo;git diff > ~/Dropbox/git-work/$repo/last-day;echo `git rev-parse --abbrev-ref HEAD` > ~/Dropbox/git-work/$repo/branch-name; }; f"
 
-  restart-work = "! f() { path=`git rev-parse --show-toplevel`;repo=`basename $path`;git co master;git pull;git co `cat ~/Dropbox/AURIGAE/git-work/$repo/branch-name`;git update;git apply ~/Dropbox/AURIGAE/git-work/$repo/last-day; }; f"
+  restart-work = "! f() { path=`git rev-parse --show-toplevel`;repo=`basename $path`;git co master;git pull;git co `cat ~/Dropbox/git-work/$repo/branch-name`;git update;git apply ~/Dropbox/git-work/$repo/last-day; }; f"
 
   ; Aux alias (used by other alias)
   branch-name = "! f() { BRANCH=\"$1\"; if [ -n \"${2}\" ]; then BRANCH=\"TVAPPS-$1-$2\"; fi; echo $BRANCH; }; f"
