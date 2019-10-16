@@ -41,4 +41,19 @@ ln -s $DOTS_FOLDER/.vim ~/.vim
 source .bashrc
 source .bash_aliases
 
+# Update packages
+sudo apt update && apt upgrade -y
+
+# Install node.js
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+sudo apt install -y nodejs openjdk-8-jre-headless
+
+# Install npm packages
+sudo npm i -g n eslint npm-check-updates grunt-cli gulp jest jshint less node-inspector nodemon nwjs yarn
+
+npm n stable
+
+
+
+
 echo -e "DONE"
