@@ -45,11 +45,10 @@ source .bash_aliases
 sudo apt update && apt upgrade -y
 
 # Install node.js
-curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-sudo apt install -y nodejs openjdk-8-jre-headless
+curl -L https://www.npmjs.com/install.sh | sudo sh
 
 # Install npm packages
-sudo npm i -g n eslint npm-check-updates grunt-cli gulp jest jshint less node-inspector nodemon nwjs yarn
+sudo npm i -g n eslint npm-check-updates jest less node-inspector 
 
 npm n stable
 
