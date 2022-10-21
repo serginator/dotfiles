@@ -208,6 +208,27 @@ if [ -d ~/cowfiles ]; then
     export COWPATH="$COWPATH:$HOME/cowfiles"
 fi
 
+# add conda
+if [ -d ~/anaconda3 ]; then
+    export PATH=/home/serginator/anaconda3/bin:$PATH
+fi
+
 export IBUS_ENABLE_SYNC_MODE=1
 
 PS1="(`hostname`)"$PS1
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/serginator/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/serginator/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/serginator/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/serginator/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
