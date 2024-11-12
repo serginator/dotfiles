@@ -45,12 +45,13 @@ source .bash_aliases
 sudo apt update && apt upgrade -y
 
 # Install node.js
-curl -L https://www.npmjs.com/install.sh | sudo sh
+curl -sL https://deb.nodesource.com/setup_18.x | sudo sh
+sudo apt install -y nodejs
 
 # Install npm packages
-sudo npm i -g n eslint npm-check-updates jest less node-inspector 
+sudo npm i -g n eslint npm-check-updates jest less
 
-npm n stable
+sudo n stable
 
 
 
